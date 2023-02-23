@@ -1,0 +1,14 @@
+@charset "UTF-8";
+@import '_variables';
+
+/* Warning */
+.footerWarning{ color: #555; background: #f7f7f7; }
+.footerWarning_cont{ max-width: 1000px; margin: 0 auto; padding: 30px; overflow: hidden; box-sizing: border-box; }
+.footerWarning_title{ margin-bottom: 0.5em; font-size: 24px; letter-spacing: 0.2em; text-align: center; }
+.footerWarning_txt{ font-size: 14px; line-height: 22px; text-align: justify; }
+.fixedBtn{ position: fixed; z-index: 99; right: 0; bottom: 0; margin: 5px; width: 60px; }
+@media (min-width: 900px){
+    .footerWarning_title{ float: left; font-size: 30px; }
+    .footerWarning_txt{ margin-left: 350px; }
+    .fixedBtn{ margin: 26px; width: auto; }
+}

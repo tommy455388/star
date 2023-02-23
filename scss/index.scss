@@ -1,0 +1,1216 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@100;300;400;500&display=swap');
+* {
+    font-family: 'Noto Sans TC', "微軟正黑體", "Microsoft JhengHei", 'Arial', sans-serif;
+    line-height: normal;
+    font-weight: 300;
+}
+
+#gotop { display: none; position: fixed; z-index: 1000; right: 20px; bottom: 20px; width: 50px; height: 50px; background: url(../images/HeaderFooter/top.svg) no-repeat; background-size: 50px 50px; cursor: pointer; }
+
+*{
+    box-sizing: border-box;
+}
+body{
+    background-color: #0F2D3C;
+}
+.tip{
+    margin-top: 40px;
+    @include iphone{
+        margin-top: 10px;
+    }
+    .icon{
+        display: inline-block;
+        vertical-align: middle;
+        margin: 10px 0;
+        width: 100%;
+        max-width: 60px;
+        height: 55px;
+        @include iphone5{
+            margin: 10px 10px 10px 0;
+            max-width: 20px;
+        }
+        &.light{
+            max-width: 35px;
+            margin: 0 10px 10px 0;
+        }
+    }
+    img{
+        display: inline-block;
+        vertical-align: middle;
+        margin: 10px 20px 10px 0;
+        max-width: 30px;
+        height: auto;
+        @include pad{
+            margin: 20px 10px;
+        }
+        @include iphone5{
+            margin: 10px 10px 10px 0;
+            max-width: 20px;
+        }
+    }
+    p{
+        display: inline-block;
+        vertical-align: middle;
+        font-size: 18px;
+        letter-spacing: 1px;
+        max-width: 570px;
+        text-align: left;
+        color: #5D5D5D;
+        @include five{
+            max-width: 350px;
+        }
+        @include iphone{
+            font-size: 14px;
+            max-width: 260px;
+        }
+        @include iphone5{
+            max-width: 230px;
+        }
+        a{
+            color: #FF9900;
+            text-decoration: underline;
+        }
+    }
+}
+h3{
+    text-align: left;
+    color: #fff;
+    font-size: 28px;
+    font-weight: 400;
+    letter-spacing: 1px;
+    margin-bottom: 50px;
+    @include iphone{
+        font-size: 24px;
+        margin-bottom: 40px;
+    }
+    img{
+        width: 24px;
+        margin-right: 5px;
+        @include iphone{
+            width: 20px;
+        }
+    }
+}
+h4{
+    color: #f9c78b;
+    font-size: 20px;
+    font-weight: 400;
+    line-height: normal;
+}
+.p1{
+    color: #fff;
+    font-size: 16px;
+    font-weight: 300;
+    margin: 10px auto 20px;
+    strong{
+        color: #f9c78b;
+        font-weight: 400;
+    }
+}
+.btn{
+    color: #f9c78b;
+    border: 1px solid #f9c78b;
+    padding: 12px 44px;
+    border-radius: 4px;
+    font-size: 16px;
+    letter-spacing: 1px;
+    position: relative;
+    transition: all .3s;
+    &:focus{
+        color: #f9c78b;
+    }
+    &:hover{
+        color: #4E463F;
+        background-color: #f9c78b;
+        font-weight: 500;
+    }
+    &.lightBtn{
+        background-color: #f9c78b;
+        color: #4E463F;
+        margin-right: 10px;
+        &:hover{
+            background-color: #ffcb8c;
+        }
+    }
+}
+.mt-20{
+    margin-top: 20px;
+}
+.mt-30{
+    margin-top: 30px;
+}
+.md-hide{
+    display: inline-block;
+    @include pad{
+        display: none;
+    }
+}
+.md-show{
+    display: none;
+    @include pad{
+        display: inline-block;
+    }
+}
+.textContent{
+    letter-spacing: 1px;
+}
+table{
+    color: #fff;
+    @include iphone{
+        font-size: 14px;
+    }
+    td{
+        padding: 10px;
+        strong{
+            color: #f9c78b;
+            font-weight: 400;
+        }
+    }
+    thead{
+        td{
+            text-align: center;
+            color: #f9c78b;
+            font-weight: 400;
+            border-bottom: 1px solid #767676;
+            border-right: 1px solid #767676;
+            &:last-child{
+                border-right: none;
+            }
+            &:first-child{
+                text-align: left;
+                color: #fff;
+                padding-left: 0;
+                font-weight: 300;
+            }
+        }
+    }
+    tbody{
+        tr{
+            td{
+                border-bottom: 1px solid #767676;
+                border-right: 1px solid #767676;
+                small{
+                    font-size: 14px;
+                    @include iphone{
+                        font-size: 12px;
+                    }
+                }
+                &:first-child{
+                    padding-left: 0;
+                }
+                &:last-child{
+                    border-right: none;
+                }
+            }
+            &:last-child{
+                td{
+                    border-bottom: none;
+                }
+            }
+        }
+    }
+}
+.wrap {
+    margin-top: 50px;
+    /* index */
+    section{
+        padding: 80px 10px 40px;
+        text-align: center;
+        @include pad{
+            padding: 80px 0 40px;
+        }
+    }
+    .index_kv {
+        background-image: url("../images/starBg.jpg");
+        background-position: center center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-attachment: fixed;
+        padding: 100px 10px 0;
+        @include six(){
+            // background: url("../images/starBgM.jpg") center center no-repeat;
+            // background-size: auto;
+            // background-attachment: fixed;
+        }
+        ul.kv_ul{
+            text-align: center;
+            >li{
+                display: block;
+                margin: 10px 40px;
+                @include pad{
+                    text-align: center;
+                }
+                @include pad{
+                    margin: 10px;
+                }
+                h1{
+                    display: inline-block;
+                    font-size: $fz_48;
+                    font-weight: 400;
+                    letter-spacing: 1px;
+                    color: #f9c78b;
+                    @include pad{
+                        font-size: 38px;
+                    }
+                    @include iphone{
+                        font-size: 34px;
+                    }
+                    @include iphone6-below{
+                        font-size: 30px;
+                    }
+                }
+                h2{
+                    line-height: normal;
+                    font-size: 28px;
+                    letter-spacing: 2px;
+                    color: #fff;
+                    font-weight: normal;
+                    margin: 10px auto;
+                    @include pad{
+                        font-size: 24px;
+                    }
+                    @include iphone(){
+                        font-size: 22px;
+                    }
+                }
+                ul{
+                    text-align: left;
+                    list-style: disc;
+                    max-width: 450px;
+                    padding-left: 20px;
+                    color: #fff;
+                    font-weight: 300;
+                    font-size: 18px;
+                    line-height: 28px;
+                    margin: 20px auto 50px;
+                    letter-spacing: 1px;
+                    @include pad{
+                        max-width: 460px;
+                    }
+                    li{
+                        margin: 6px auto;
+                    }
+                    span{
+                        color: #f9c78b;
+                        font-weight: 500;
+                    }
+                    small{
+                        font-size: 16px;
+                        @include pad{
+                            font-size: 14px;
+                        }
+                    }
+                    @include pad{
+                        font-size: 16px;
+                    }
+                }
+                .btn_block{
+                    margin: 20px 0;
+                    .actionBtn{
+                        display: inline-block;
+                        color: #f9c78b;
+                        border: 1px solid #f9c78b;
+                        padding: 15px 20px;
+                        width: 100%;
+                        max-width: 200px;
+                        border-radius: 6px;
+                        font-size: $fz_20;
+                        box-shadow: 0 0 16px rgba(255,255,255,.38);
+                        position: relative;
+                        transition: all .3s;
+                        &:hover{
+                            color: #4E463F;
+                            background-color: #f9c78b;
+                            font-weight: 500;
+                        }
+                    }
+                }
+            }
+            .plane{
+                position: relative;
+                display: inline-block;
+                margin-bottom: 0;
+                width: 100%;
+                max-width: 400px;
+                height: 98px;
+                @include five{
+                    width: 80%;
+                    height: 20vw;
+                }
+                img{
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    width: 100%;
+                    max-width: 400px;
+                    &.light{
+                        opacity: 0;
+                        animation: flash 1s infinite;
+                    }
+                }
+            }
+            @keyframes flash {
+                0%{
+                    opacity: 0;
+                }
+                100%{
+                    opacity: 1;
+                }
+            }
+        }
+    }
+    .cardBg{
+        background: url("../images/starBg.jpg") center center no-repeat;
+        background-size: cover;
+        background-attachment: fixed;
+        padding: 40px 0 0;
+        height: 25vw;
+        img{
+            width: 100%;
+        }
+    }
+    .ideaSection{
+        background: linear-gradient(to bottom, #040306, #0F2D3C);
+        .container{
+            .d-flex{
+                display: flex;
+                align-items: flex-start;
+                justify-content: space-between;
+                @include lg{
+                    flex-wrap: wrap;
+                }
+            }
+            .textContent, .cardBox{
+                margin: 10px;
+                @include lg{
+                    margin: 20px 0;
+                    width: 100%;
+                }
+            }
+            .textContent{
+                text-align: left;
+                max-width: 440px;
+                @include lg{
+                    max-width: none;
+                }
+                p{
+                    color: #fff;
+                    font-size: 16px;
+                    line-height: 26px;
+                    font-weight: 300;
+                    margin: 15px auto;
+                    br{
+                        @include lg{
+                            display: none;
+                        }
+                    }
+                }
+            }
+            .cardBox{
+                display: flex;
+                align-items: flex-end;
+                justify-content: center;
+                @include five{
+                    flex-wrap: wrap;
+                    justify-content: left;
+                }
+                .smallCardBox{
+                    display: flex;
+                    flex-wrap: nowrap;
+                    @include six{
+                        width: 100%;
+                    }
+                    @include five{
+                        justify-content: space-between;
+                        margin-top: 30px;
+                    }
+                }
+                .card{
+                    margin: 0 6px;
+                    @include five{
+                        margin: 0 8px;
+                    }
+                    img{
+                        width: 100%;
+                        max-width: 100px;
+                        cursor: pointer;
+                        @include five{
+                            max-width: none;
+                        }
+                    }
+                    &.active{
+                        margin-right: 15px;
+                        margin-bottom: 20px;
+                        position: relative;
+                        min-height: 316px;
+                        @include xl {
+                            min-height: 259px;
+                            min-width: 164px;
+                        }
+                        @include lg {
+                            min-height: 316px;
+                            min-width: 200px;
+                        }
+                        @include pad{
+                            margin-bottom: auto;
+                        }
+                        @include five{
+                            width: 38vw;
+                            height: 60vw;
+                            min-height: auto;
+                            min-width: auto;
+                        }
+                        img{
+                            cursor: default;
+                        }
+                        .markbox{
+                            position: absolute;
+                            right: -45%;
+                            top: 12%;
+                            z-index: 10;
+                            @include xl{
+                                right: -55%;
+                            }
+                            @include lg{
+                                right: -45%;
+                            }
+                            @include five{
+                                right: -90px;
+                                top: 26%;
+                            }
+                            h4.cardName{
+                                position: absolute;
+                                text-align: left;
+                                width: 220px;
+                                color: #F9C78B;
+                                left: 35%;
+                                top: -110%;
+                                font-size: 18px;
+                                font-weight: 300;
+                                letter-spacing: 1px;
+                                @include five{
+                                    top: -200%;
+                                    width: 40vw;
+                                }
+                                span{
+                                    margin-left: 5px;
+                                    color: #fff;
+                                    font-weight: 300;
+                                    font-size: 14px;
+                                    letter-spacing: 0;
+                                    @include five{
+                                        margin-left: 0;
+                                    }
+                                }
+                                br{
+                                    display: none;
+                                    @include five{
+                                        display: block;
+                                    }
+                                }
+                            }
+                            p{
+                                position: absolute;
+                                text-align: left;
+                                width: 310px;
+                                line-height: 18px;
+                                color: #fff;
+                                left: 35%;
+                                top: 30%;
+                                font-weight: 300;
+                                @include xl{
+                                    width: 270px;
+                                }
+                                @include lg{
+                                    width: 310px;
+                                }
+                                @include six{
+                                    width: 52vw;
+                                }
+                                @include five{
+                                    width: 45vw;
+                                    line-height: 22px;
+                                }
+                            }
+                        }
+                        img{
+                            max-width: 200px;
+                        }
+                    }
+                    &.smallCard{
+                        img{
+                            transition: all .3s;
+                            @media (min-width: 768px) {
+                                &:hover{
+                                    transform: translateY(-10px);
+                                }
+                                &:hover + p{
+                                    opacity: 1;
+                                }
+                            }
+                        }
+                        p{
+                            color: #fff;
+                            opacity: 0;
+                            transition: all .3s;
+                            @include pad{
+                                display: none;
+                            }
+                            @include five{
+                                display: block;
+                                opacity: 1;
+                                margin-top: 6px;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+    .newSection{
+        padding-top: 0;
+        margin-top: 80px;
+        .container{
+            text-align: left;
+            .textImg{
+                display: flex;
+                justify-content: space-between;
+                margin-bottom: 70px;
+                &:last-child{
+                    margin-bottom: 0;
+                }
+            }
+            .textContent{
+                max-width: 480px;
+                margin-right: 20px;
+                @include six{
+                    max-width: none;
+                    margin-right: auto;
+                }
+            }
+            .imgContent{
+                img{
+                    max-width: 280px;
+                    @include lg{
+                        width: 200px;
+                    }
+                }
+                @include six{
+                    display: none;
+                }
+            }
+        }
+    }
+    .starSection{
+        padding-top: 0;
+        margin-top: 80px;
+        text-align: left;
+        .tableBox{
+            overflow: scroll;
+        }
+        .largeTable{
+            width: 100%;
+            min-width: 790px;
+            thead{
+                tr{
+                    td{
+                        &:first-child{
+                            background-color: #0F2D3C;
+                            position: -webkit-sticky;
+                            position: sticky;
+                            left: 0;
+                            @include lg{
+                                &::after{
+                                    content: '';
+                                    width: 10px;
+                                    height: 100%;
+                                    background: linear-gradient(to right, #767676a4, #76767600);
+                                    position: absolute;
+                                    right: -10px;
+                                    top: 0;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+            tbody{
+                tr{
+                    td{
+                        &:first-child{
+                            padding-left: 0;
+                            width: 220px;
+                            background-color: #0F2D3C;
+                            position: sticky;
+                            left: 0;
+                            @include lg{
+                                width: 130px;
+                                &::after{
+                                    content: '';
+                                    width: 10px;
+                                    height: 100%;
+                                    background: linear-gradient(to right, #767676a4, #76767600);
+                                    position: absolute;
+                                    right: -10px;
+                                    top: 0;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        .darkbox{
+            background-color: #4E463F;
+            border-radius: 4px;
+            padding: 30px;
+            margin: 80px auto 50px;
+            @include six{
+                padding: 20px 10px;
+            }
+            &~.darkbox{
+                margin: 50px auto;
+            }
+            &:last-of-type{
+                margin-bottom: 0;
+            }
+            .rowBox{
+                display: flex;
+                align-items: center;
+                @include pad{
+                    flex-wrap: wrap;
+                }
+            }
+            .textContent{
+                max-width: 510px;
+                margin-right: 20px;
+                @include pad{
+                    max-width: none;
+                    margin-right: 0;
+                }
+                .p1{
+                    .tri{
+                        margin: 0 4px;
+                    }
+                }
+                &.textContent-lg{
+                    max-width: none;
+                }
+            }
+            .tableContent{
+                br{
+                    @include pad{
+                        display: none;
+                    }
+                }
+                @include pad{
+                    margin-bottom: 20px;
+                }
+                td{
+                    font-size: 14px;
+                    padding: 10px;
+                    @include five{
+                        padding: 10px 5px;
+                    }
+                    &.largetd{
+                        width: 130px;
+                        @include pad{
+                            width: 250px;
+                        }
+                    }
+                }
+                &.middleTable{
+                    min-width: 492px;
+                    @include pad{
+                        min-width: auto;
+                        width: 100%;
+                    }
+                    .effect{
+                        position: relative;
+                        @include pad{
+                            &::before{
+                                content: '';
+                                width: 10px;
+                                height: 100%;
+                                background: linear-gradient(to left, #767676a4, #76767600);
+                                position: absolute;
+                                right: 0;
+                                top: 0;
+                            }
+                            .tableBox{
+                                overflow: scroll;
+                                table{
+                                    min-width: 657px;
+                                    letter-spacing: normal;
+                                }
+                            }
+                        }
+                    }
+                }
+                &.smallTable{
+                    min-width: 350px;
+                    @include pad{
+                        min-width: auto;
+                    }
+                }
+            }
+        }
+    }
+    .daySection{
+        padding-top: 0;
+        margin-top: 80px;
+        text-align: left;
+        letter-spacing: 1px;
+        .container{
+            .btn{
+                margin-top: 20px;
+            }
+            .effect{
+                width: 100%;
+                position: relative;
+                @media (max-width: 1200px) {
+                    &::before{
+                        content: '';
+                        width: 10px;
+                        height: 100%;
+                        background: linear-gradient(to left, #767676a4, #76767600);
+                        position: absolute;
+                        right: 0;
+                        top: 0;
+                    }
+                }
+            }
+            .tableBox{
+                overflow: scroll;
+                table{
+                    min-width: 1140px;
+                    letter-spacing: normal;
+                }
+            }
+        }
+    }
+    .monthSection{
+        padding-top: 0;
+        margin-top: 80px;
+        text-align: left;
+        letter-spacing: 1px;
+        .rowBox{
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-top: 50px;
+            @include pad{
+                flex-wrap: wrap;
+            }
+            .textContent{
+                max-width: 600px;
+                margin-right: 30px;
+                @include pad{
+                    margin-right: 0;
+                }
+            }
+            .tableContent{
+                margin: 10px;
+                min-width: 380px;
+                @include pad{
+                    margin: 0 0 30px;
+                }
+                @include iphone{
+                    min-width: auto;
+                    width: 100%;
+                    thead{
+                        td{
+                            text-align: left;
+                        }
+                    }
+                }
+            }
+        }
+    }
+    .flySection{
+        padding-top: 0;
+        margin-top: 80px;
+        text-align: left;
+        .rowBox{
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            margin-top: 70px;
+            &:first-of-type{
+                margin-top: 0;
+            }
+            @include pad{
+                flex-wrap: wrap;
+            }
+            .textContent{
+                max-width: 600px;
+                margin-right: 30px;
+                @include pad{
+                    max-width: none;
+                    margin-right: 0;
+                }
+                .btn_block{
+                    .btn{
+                        @include lg{
+                            padding: 12px 30px;
+                        }
+                    }
+                }
+            }
+            .tableContent{
+                table{
+                    width: 500px;
+                    @include lg{
+                        width: 410px;
+                    }
+                    @include pad{
+                        width: 100%;
+                    }
+                }
+                .tableNote{
+                    color: #fff;
+                    list-style: disc;
+                    padding-left: 15px;
+                    margin-top: 20px;
+                    li{
+                        margin: 5px auto;
+                    }
+                }
+            }
+        }
+        .textImg{
+            display: flex;
+            justify-content: space-between;
+            margin-top: 70px;
+            .textContent{
+                max-width: 480px;
+                margin-right: 20px;
+                @include six{
+                    max-width: none;
+                    margin-right: auto;
+                }
+                .btn{
+                    margin-top: 0;
+                }
+            }
+            .imgContent{
+                img{
+                    max-width: 280px;
+                    @include lg{
+                        width: 200px;
+                    }
+                }
+                @include six{
+                    display: none;
+                }
+            }
+        }
+    }
+    .hexagonSection{
+        padding: 60px 10px 180px;
+        $hexagon-width: 220px;
+        $hexagon-height: $hexagon-width*.55;
+        $hexagon-margin: 12px;
+        $hexagon-title-color: #fff;
+        $hexagon-border-color: #fff;
+        $hexagon-border-color--hover: #72f88e;
+        $hexagon-image-color: #4E463F;
+        $honeycomb-max-width: 1150px;
+        $viewport-thereshold: $hexagon-width + $hexagon-margin;
+        .honeycomb {
+            display: flex;
+            flex-wrap: wrap;
+            list-style: none;
+            justify-content: center;
+            align-items: center;
+            max-width: $honeycomb-max-width;
+            letter-spacing: 1px;
+            margin: 0 auto;
+            padding: 0;
+            transform: translateY(#{$hexagon-height/4});
+          
+            &-cell {
+              flex: 0 1 $hexagon-width;
+              max-width: $hexagon-width;
+              height: $hexagon-height;
+              margin: $hexagon-height/2.1 $hexagon-margin/2 $hexagon-margin;
+              position: relative;
+              padding: 0.4em;
+              text-align: center;
+              z-index: 1;
+              @media (max-width: 483px){
+                flex: 0 1 $hexagon-width+-55;
+                max-width: $hexagon-width+-55;
+                height: ($hexagon-width+-55)*.55;
+                margin: ($hexagon-width+-55)*.55/2.1 ($hexagon-margin+-2)/2 ($hexagon-margin+-2);  
+                padding: 0.2em;
+                &:nth-child(3n) {
+                    margin-right: calc(50% - #{($hexagon-width+-55)/2});
+                    margin-left: calc(50% - #{($hexagon-width+-55)/2});
+                }
+              }
+              @include iphone6-below{
+                flex: 0 1 $hexagon-width+-80;
+                max-width: $hexagon-width+-80;
+                height: ($hexagon-width+-80)*.55;
+                margin: ($hexagon-width+-80)*.55/2.1 $hexagon-margin/4 $hexagon-margin/2;  
+                &:nth-child(3n) {
+                    margin-right: calc(50% - #{($hexagon-width+-80)/2});
+                    margin-left: calc(50% - #{($hexagon-width+-80)/2});
+                }
+              }
+        
+              &__title {
+                height: 100%;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                p{
+                    color: #fff;
+                    margin-top: 8px;
+                    font-size: 16px;
+                }
+                @media (max-width: 483px){
+                    h4{
+                        font-size: 18px;
+                    }
+                    p{
+                        margin-top: 8px;
+                        font-size: 13px;
+                        letter-spacing: 0;
+                    }
+                }
+              }
+          
+              &__image {
+                object-fit: cover;
+                object-position: center;
+              }
+              
+              &::after {
+                content: '';
+              }
+          
+              &::after, &__image {
+                top: -50%;
+                left: 0;
+                width: 100%;
+                height: 200%;
+                display: block;
+                position: absolute;
+                clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
+                z-index: -1;
+              }
+              &::after {
+                background: $hexagon-image-color;
+                opacity: 0.75;
+                transition: all .3s;
+              }
+          
+              &:hover {
+                .honeycomb-cell__title {
+                    h4, p{
+                        color: #4E463F;
+                    }
+                }
+                &::after {
+                    background: rgba(255, 255, 255, 0.9);
+                }
+              }
+            }
+        }
+        @media (max-width:#{2*$viewport-thereshold}){
+            .honeycomb-cell {
+            //   margin: #{$hexagon-margin/2 + $hexagon-height/2} $hexagon-margin;
+            }
+          }
+          
+          @media (min-width: #{2*$viewport-thereshold}) and (max-width:#{3*$viewport-thereshold+20}){
+            .honeycomb-cell:nth-child(3n) {
+              margin-right: calc(50% - #{$hexagon-width/2});
+              margin-left: calc(50% - #{$hexagon-width/2});
+            }
+          
+            .honeycomb__placeholder:nth-child(3n + 5) {
+              display:block;
+            }
+          }
+          
+          @media (min-width: #{3*$viewport-thereshold}) and (max-width: $honeycomb-max-width) {
+            .honeycomb-cell:nth-child(5n + 4) {
+              margin-left: calc(50% - #{$hexagon-width + $hexagon-margin});
+            }
+          
+            .honeycomb-cell:nth-child(5n + 5) {
+              margin-right: calc(50% - #{$hexagon-width + $hexagon-margin});
+            }
+          
+            .honeycomb__placeholder:nth-child(5n), .honeycomb__placeholder:nth-child(5n + 3) {
+              display:block;
+            }
+          }
+          
+          @media (min-width: $honeycomb-max-width) {
+            .honeycomb-cell:nth-child(7n + 5)  {
+              margin-left: calc(50% - #{$hexagon-width*1.5 + $hexagon-margin});
+            }
+          
+            .honeycomb-cell:nth-child(7n + 5):nth-last-child(2) {
+              margin-right: calc(50% - #{$hexagon-width*1.5 + $hexagon-margin});
+            }
+        }
+        @media (min-width: $honeycomb-max-width){
+            .honeycomb-cell:nth-child(1) {
+                margin-left: -$hexagon-width/2;
+            }
+            .honeycomb-cell:nth-child(5) {
+                margin-left: 143px;
+            }
+            .honeycomb-cell:nth-child(8n + 8){
+                margin-right: $hexagon-margin*2
+            }
+        }
+    }
+}
+.white-popup {
+    position: relative;
+    background: #FFF;
+    padding: 30px 20px;
+    width: auto;
+    max-width: 1000px;
+    margin: 20px auto;
+    @include five{
+        padding: 30px 10px;
+    }
+    h5{
+        color: #a55a00;
+        border-bottom: 1px solid #a55a00;
+        font-size: 24px;
+        font-weight: 400;
+        line-height: normal;
+        padding-bottom: 10px;
+        margin-bottom: 20px;
+    }
+    a{
+        color: #00a19b;
+        font-weight: 500;
+        text-decoration: underline;
+    }
+    p{
+        margin: 5px auto;
+    }
+    ul{
+        list-style: disc;
+        padding-left: 16px;
+        li{
+            margin: 5px auto;
+        }
+        &.decimal{
+            list-style: decimal;
+        }
+    }
+    table{
+        color: #1c1c1c;
+        font-size: 14px;
+        margin: 10px 0 20px;
+        tbody tr td:first-child {
+            padding-left: 5px;
+        }
+        tbody tr td{
+            padding: 5px;
+            border: 1px solid #767676;
+        }
+    }
+}
+.hexgon-popup {
+    position: relative;
+    background: #FFF;
+    padding: 30px 20px;
+    width: auto;
+    max-width: 1000px;
+    margin: 20px auto;
+    @include five{
+        padding: 30px 10px;
+    }
+    .mt-40{
+        margin-top: 40px;
+    }
+    h5{
+        color: #a55a00;
+        border-bottom: 1px solid #a55a00;
+        font-size: 24px;
+        font-weight: 400;
+        line-height: normal;
+        padding-bottom: 10px;
+        margin-bottom: 20px;
+    }
+    table{
+        width: 100%;
+        color: #1c1c1c;
+        font-size: 14px;
+        margin: 10px 0 20px;
+        thead{
+            background-color: #c7883c;
+            td{
+                padding: 5px;
+                color: #fff;
+                border: 1px solid #767676;
+            }
+        }
+        tbody tr td:first-child {
+            padding-left: 5px;
+        }
+        tbody tr td{
+            padding: 5px;
+            border: 1px solid #767676;
+        }
+        strong{
+            color: #a55a00;
+        }
+    }
+    .effect{
+        position: relative;
+        @media (max-width: 1016px) {
+            &::before{
+                content: '';
+                width: 10px;
+                height: 100%;
+                background: linear-gradient(to right, rgba(255, 255, 255, 0), #fff);
+                position: absolute;
+                right: 0;
+                top: 0;
+            }
+        }
+    }
+    .tableBox{
+        overflow: scroll;
+        margin: 10px 0 20px;
+        table{
+            min-width: 960px;
+            margin: 0;
+        }
+        .mCSB_scrollTools .mCSB_dragger .mCSB_dragger_bar{
+            background-color: rgba(0, 0, 0, 0.3)
+        }
+    }
+    .text-center{
+        text-align: center;
+    }
+    .btn{
+        border-color: #c7883c;
+        color: #c7883c;
+        width: 100%;
+        max-width: 267px;
+        padding: 14px 10px;
+        &:hover{
+            background-color: #c7883c;
+            color: #fff;
+        }
+    }
+}
+.mCustomScrollBox{
+    height: auto;
+}
+.mCSB_container{
+    overflow: visible;
+}

@@ -1,0 +1,318 @@
+@charset "UTF-8";
+/*
+* @data 2016-11-14
+* Author: rong
+*
+* E.SUN RWD Stylesheet
+--------------------------------
+   Base 共用設定
+--------------------------------
+*/
+/*-------- reset ----------*/
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block;
+}
+
+body {
+  line-height: 1;
+}
+
+ol, ul {
+  list-style: none;
+}
+
+blockquote, q {
+  quotes: none;
+}
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: '';
+  content: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+/*-------- reset ----------*/
+html, body {
+  height: 100%;
+}
+
+html, body, div, span, p, ul, li, input, table, thead, tr, th, td {
+  margin: 0;
+  padding: 0;
+  font-family: '微軟正黑體', 'Microsoft JhengHei', 'Microsoft YaHei', Helvetica, Arial, sans-serif;
+}
+
+body {
+  line-height: auto;
+  font-size: 100%;
+  font-weight: normal;
+  font-family: '微軟正黑體', 'Microsoft JhengHei', 'Microsoft YaHei', Helvetica, Arial, sans-serif;
+  word-wrap: break-word;
+  -webkit-text-size-adjust: none;
+}
+
+a img, img {
+  max-width: 100%;
+  height: auto;
+}
+
+.clearfix:after {
+  content: ".";
+  display: block;
+  height: 0;
+  clear: both;
+  visibility: hidden;
+}
+
+.boxsizing {
+  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+}
+
+/*-------- 共用字形設定 ----------*/
+.f-15 {
+  font-size: 15px;
+  line-height: 25px;
+}
+
+.f-18 {
+  font-size: 18px;
+}
+
+.f-20 {
+  font-size: 20px;
+  line-height: 2em;
+}
+
+.f-24 {
+  font-size: 24px;
+  line-height: 48px;
+}
+
+.f-25 {
+  font-size: 25px;
+}
+
+.f-32 {
+  font-size: 36px;
+}
+
+.f-36 {
+  font-size: 36px;
+}
+
+.f-45 {
+  font-size: 45px;
+}
+
+.a-greenLight {
+  color: #119f97;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.a-greenLight:hover {
+  color: #33cccc;
+}
+
+.f-bold {
+  font-weight: bold;
+}
+
+/* color */
+.f-white {
+  color: #fff;
+}
+
+.f-red {
+  color: #EE0000;
+}
+
+.f-pink {
+  color: #ed1e79;
+}
+
+.f-blue {
+  color: #0068b7;
+}
+
+.f-fasternBlue {
+  color: #088f9a;
+}
+
+.f-yellow {
+  color: #fff9c4;
+}
+
+.f-sunglow {
+  color: #FC3;
+}
+
+.f-gray {
+  color: #666;
+}
+
+.f-green {
+  color: #03a099;
+}
+
+.f-black {
+  color: #414141;
+}
+
+.f-grayLight {
+  color: #6c6c6c;
+}
+
+.f-grayDark {
+  color: #464646;
+}
+
+.f-greenDark {
+  color: #2c7a70;
+}
+
+.f-redDark {
+  color: #d00800;
+}
+
+/*-------- background ----------*/
+.bg-white {
+  background-color: #fff;
+}
+
+.bg-green {
+  background-color: #48a498;
+}
+
+.bg-persianGreen {
+  background-color: #099;
+}
+
+.bg-greenLight {
+  background-color: #f4f7e9;
+}
+
+.bg-blueLight {
+  background-color: #EAFCFF;
+}
+
+.bg-grayLight {
+  background-color: #f3f3f3;
+}
+
+.bg-greenDark {
+  background-color: #2c7a70;
+}
+
+.bg-gray {
+  background-color: #f7f7f7;
+}
+
+/*-------- 共用其它設定 ----------*/
+.fl {
+  float: left;
+}
+
+.fr {
+  float: right;
+}
+
+.whole {
+  width: 100%;
+}
+
+.half-space {
+  display: inline-block;
+  width: 49%;
+  text-align: center;
+}
+
+.three-space {
+  display: inline-block;
+  width: 33%;
+  text-align: center;
+}
+
+.w70pct {
+  width: 70%;
+  max-width: 1200px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.w295 {
+  max-width: 293px;
+  width: 65%;
+}
+
+.pv20 {
+  padding-top: 60px;
+  padding-bottom: 60px;
+}
+
+.pv10 {
+  padding-top: 30px;
+  padding-bottom: 5px;
+  margin-left: -80px;
+}
+
+.mv-auto {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.align-center {
+  text-align: center;
+}
+
+.breakDesktop {
+  display: block;
+}
+
+#noie6 {
+  position: relative;
+  top: 0;
+  display: block;
+  height: 50px;
+  color: #555;
+  font-size: 15px;
+  text-align: center;
+  letter-spacing: 1px;
+  background: #FFDFDF;
+  border: 1px solid #FF2F2F;
+  padding: 10px;
+}
