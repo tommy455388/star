@@ -1457,12 +1457,10 @@ table tbody tr:last-child td {
   }
 }
 .wrap .index_kv {
-  background-image: url("../images/star.svg");
-  background-position: center center;
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-attachment: fixed;
   padding: 100px 10px 0;
+}
+.wrap .index_kv .starBg {
+  position: fixed;
 }
 .wrap .index_kv ul.kv_ul {
   text-align: center;
