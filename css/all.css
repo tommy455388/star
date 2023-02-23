@@ -1457,7 +1457,7 @@ table tbody tr:last-child td {
   }
 }
 .wrap .index_kv {
-  background-image: url("../images/star.png");
+  background-image: url("../images/star.svg");
   background-position: center center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -1613,7 +1613,7 @@ table tbody tr:last-child td {
   }
 }
 .wrap .cardBg {
-  background: url("../images/star.png") center center no-repeat;
+  background: url("../images/star.svg") center center no-repeat;
   background-size: cover;
   background-attachment: fixed;
   padding: 40px 0 0;
