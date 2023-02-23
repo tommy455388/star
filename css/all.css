@@ -1450,6 +1450,7 @@ table tbody tr:last-child td {
 .wrap section {
   padding: 80px 10px 40px;
   text-align: center;
+  background-color: #0F2D3C;
 }
 @media (max-width: 768px) {
   .wrap section {
@@ -1457,6 +1458,7 @@ table tbody tr:last-child td {
   }
 }
 .wrap .index_kv {
+  background-color: transparent;
   padding: 100px 10px 0;
 }
 .wrap .index_kv .starBg {
@@ -1464,6 +1466,7 @@ table tbody tr:last-child td {
   top: 0;
   left: 0;
   z-index: -1;
+  min-width: 1300px;
 }
 .wrap .index_kv ul.kv_ul {
   text-align: center;
@@ -1865,10 +1868,6 @@ table tbody tr:last-child td {
     margin-top: 6px;
   }
 }
-.wrap .newSection {
-  padding-top: 0;
-  margin-top: 80px;
-}
 .wrap .newSection .container {
   text-align: left;
 }
@@ -1904,8 +1903,6 @@ table tbody tr:last-child td {
   }
 }
 .wrap .starSection {
-  padding-top: 0;
-  margin-top: 80px;
   text-align: left;
 }
 .wrap .starSection .tableBox {
@@ -2062,8 +2059,6 @@ table tbody tr:last-child td {
   }
 }
 .wrap .daySection {
-  padding-top: 0;
-  margin-top: 80px;
   text-align: left;
   letter-spacing: 1px;
 }
@@ -2093,8 +2088,6 @@ table tbody tr:last-child td {
   letter-spacing: normal;
 }
 .wrap .monthSection {
-  padding-top: 0;
-  margin-top: 80px;
   text-align: left;
   letter-spacing: 1px;
 }
@@ -2137,8 +2130,6 @@ table tbody tr:last-child td {
   }
 }
 .wrap .flySection {
-  padding-top: 0;
-  margin-top: 80px;
   text-align: left;
 }
 .wrap .flySection .rowBox {
