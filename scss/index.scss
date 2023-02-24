@@ -216,16 +216,25 @@ table{
     section{
         padding: 80px 10px 40px;
         text-align: center;
+        background-color: #0F2D3C;
         @include pad{
             padding: 80px 0 40px;
         }
     }
     .index_kv {
-        background-image: url("../images/star.svg");
-        background-position: center center;
-        background-repeat: no-repeat;
-        background-size: cover;
-        background-attachment: fixed;
+        background-color: transparent;
+        .starBg{
+            position: fixed;
+            top: 0;
+            left: 0;
+            z-index: -1;
+            min-width: 1300px;
+        }
+        // background-image: url("../images/star.svg");
+        // background-position: center center;
+        // background-repeat: no-repeat;
+        // background-size: cover;
+        // background-attachment: fixed;
         padding: 100px 10px 0;
         @include six(){
             // background: url("../images/starBgM.jpg") center center no-repeat;
@@ -568,8 +577,8 @@ table{
         }
     }
     .newSection{
-        padding-top: 0;
-        margin-top: 80px;
+        // padding-top: 0;
+        // margin-top: 80px;
         .container{
             text-align: left;
             .textImg{
@@ -602,8 +611,8 @@ table{
         }
     }
     .starSection{
-        padding-top: 0;
-        margin-top: 80px;
+        // padding-top: 0;
+        // margin-top: 80px;
         text-align: left;
         .tableBox{
             overflow: scroll;
@@ -757,8 +766,8 @@ table{
         }
     }
     .daySection{
-        padding-top: 0;
-        margin-top: 80px;
+        // padding-top: 0;
+        // margin-top: 80px;
         text-align: left;
         letter-spacing: 1px;
         .container{
@@ -785,13 +794,22 @@ table{
                 table{
                     min-width: 1140px;
                     letter-spacing: normal;
+                    .w-43{
+                        width: 43px;
+                    }
+                    .pr-0{
+                        padding-right: 0;
+                        @media (max-width: 1200px) {
+                            padding-right: 10px;
+                        }
+                    }
                 }
             }
         }
     }
     .monthSection{
-        padding-top: 0;
-        margin-top: 80px;
+        // padding-top: 0;
+        // margin-top: 80px;
         text-align: left;
         letter-spacing: 1px;
         .rowBox{
@@ -828,8 +846,8 @@ table{
         }
     }
     .flySection{
-        padding-top: 0;
-        margin-top: 80px;
+        // padding-top: 0;
+        // margin-top: 80px;
         text-align: left;
         .rowBox{
             display: flex;
