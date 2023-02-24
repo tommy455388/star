@@ -65,7 +65,7 @@ window.smoothScroll = (function (window, document, undefined) {
     var location = 0;
     if (anchor.offsetParent) {
       do {
-        location += anchor.offsetTop;
+        location += anchor.offsetTop+50;
         anchor = anchor.offsetParent;
       } while (anchor);
     }
