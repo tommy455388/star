@@ -2087,6 +2087,17 @@ table tbody tr:last-child td {
   min-width: 1140px;
   letter-spacing: normal;
 }
+.wrap .daySection .container .tableBox table .w-43 {
+  width: 43px;
+}
+.wrap .daySection .container .tableBox table .pr-0 {
+  padding-right: 0;
+}
+@media (max-width: 1200px) {
+  .wrap .daySection .container .tableBox table .pr-0 {
+    padding-right: 10px;
+  }
+}
 .wrap .monthSection {
   text-align: left;
   letter-spacing: 1px;
